@@ -99,6 +99,7 @@ body {
   }
   button:last-child {
     border: 0;
+    background-color: inherit;
   }
   button:last-child:hover {
     cursor: pointer;

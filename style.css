@@ -101,6 +101,7 @@ body {
 }
 .card-footer button:last-child {
   border: 0;
+  background-color: inherit;
 }
 .card-footer button:last-child:hover {
   cursor: pointer;
