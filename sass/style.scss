@@ -1,0 +1,113 @@
+@import "_colors";
+@import "_fonts";
+
+@mixin center($justify: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $red-hat;
+  font-size: 1rem;
+  color: $desaturated-blue;
+  transition: all 0.5s;
+}
+
+body {
+  @include center;
+  min-height: 100vh;
+  background-image: url("./assets/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $pale-blue;
+}
+
+.card-container {
+  max-width: 350px;
+  background-color: $very-pale-blue;
+  border-radius: 1rem;
+}
+
+.card-header {
+  max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-body {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.card-footer {
+  padding: 1.5rem;
+}
+
+.card-body {
+  h2 {
+    margin: 1rem 0;
+    color: $dark-blue;
+    font-size: 1.3rem;
+  }
+  h2, p {
+    text-align: center;
+  }
+}
+
+.plan-group {
+  @include center(space-between);
+  width: 90%;
+  padding: 10px;
+  margin:  1.3rem  auto 0;
+  background-color: aliceblue;
+  border-radius: 8px;
+  a {
+    color: $bright-blue;
+  }
+  a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+  .cost {
+    @include center;
+    img {
+      margin-right: 1rem;
+    }
+    .annual p:first-child {
+      color: $dark-blue;
+      font-weight: bold;
+    }
+  }
+}
+
+.card-footer {
+  @include center($direction: column);
+  button:first-child {
+    background-color: $bright-blue;
+    color: $very-pale-blue;
+    width: 90%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin-bottom: 1rem;
+  }
+  button:first-child:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  button:last-child {
+    border: 0;
+  }
+  button:last-child:hover {
+    cursor: pointer;
+    color: $dark-blue;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./assets/images/pattern-background-desktop.svg");
+  }
+}

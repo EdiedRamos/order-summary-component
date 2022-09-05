@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  color: hsl(224deg, 23%, 55%);
+  transition: all 0.5s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-height: 100vh;
+  background-image: url("./assets/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225deg, 100%, 94%);
+}
+
+.card-container {
+  max-width: 350px;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 1rem;
+}
+
+.card-header {
+  max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-body {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.card-footer {
+  padding: 1.5rem;
+}
+
+.card-body h2 {
+  margin: 1rem 0;
+  color: hsl(223deg, 47%, 23%);
+  font-size: 1.3rem;
+}
+.card-body h2, .card-body p {
+  text-align: center;
+}
+
+.plan-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  padding: 10px;
+  margin: 1.3rem auto 0;
+  background-color: aliceblue;
+  border-radius: 8px;
+}
+.plan-group a {
+  color: hsl(245deg, 75%, 52%);
+}
+.plan-group a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+.plan-group .cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.plan-group .cost img {
+  margin-right: 1rem;
+}
+.plan-group .cost .annual p:first-child {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-footer button:first-child {
+  background-color: hsl(245deg, 75%, 52%);
+  color: hsl(225deg, 100%, 98%);
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 1rem;
+}
+.card-footer button:first-child:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.card-footer button:last-child {
+  border: 0;
+}
+.card-footer button:last-child:hover {
+  cursor: pointer;
+  color: hsl(223deg, 47%, 23%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./assets/images/pattern-background-desktop.svg");
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
